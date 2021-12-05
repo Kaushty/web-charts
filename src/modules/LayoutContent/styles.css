@@ -6,7 +6,7 @@
 .Layout__Grid--loading {
   align-items: center;
   display: flex;
-  height: 100%;
+  height: calc(100vh - 160px);
   justify-content: center;
   width: 100%;
 }

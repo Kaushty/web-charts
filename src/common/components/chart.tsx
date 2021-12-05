@@ -12,13 +12,13 @@ import {
   PieChart,
 } from 'recharts';
 
+import { randomColorGenerator } from '../../common/utils';
+
 function Chart({ type, data }: { type: string; data: any[] }) {
   const chartData = data.map((element, index) => ({
     name: `Element ${index + 1}`,
     value: element,
   }));
-
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
   return (
     <div className="Chart_Cover">
@@ -30,7 +30,7 @@ function Chart({ type, data }: { type: string; data: any[] }) {
               <XAxis dataKey="name" />
               <YAxis />
               <Tooltip />
-              <Bar dataKey="value" fill="#8884d8" />
+              <Bar dataKey="value" fill={randomColorGenerator()} />
             </BarChart>
           </ResponsiveContainer>
         )}
@@ -47,10 +47,7 @@ function Chart({ type, data }: { type: string; data: any[] }) {
                 label
               >
                 {data.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
-                  />
+                  <Cell key={`cell-${index}`} fill={randomColorGenerator()} />
                 ))}
               </Pie>
             </PieChart>
