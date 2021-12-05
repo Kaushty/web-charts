@@ -12,3 +12,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.site-page-header,
+.site-page-content,
+.site-page-footer {
+  padding: 1.25rem;
+}
+
+.site-page-header {
+  height: 80px;
+}
+
+.site-page-footer {
+  height: 60px;
+}
+
+.site-page-content {
+  min-height: calc(100vh - 80px);
+}
+
+.Chart_Cover {
+  padding-top: 1rem;
+}
