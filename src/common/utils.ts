@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid'
+
 export const randomColorGenerator = (): string => {
     const randomNum = Math.floor(Math.random() * 100);
     const colorList: string[] = [
@@ -12,4 +14,8 @@ export const randomColorGenerator = (): string => {
         '#59BA5E',
     ];
     return colorList[randomNum % colorList.length];
+}
+
+export const getRandomUid = () => {
+    return uuidv4()
 }
